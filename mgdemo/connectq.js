@@ -1,6 +1,6 @@
 const res = require('express/lib/response')
 const mongoose=require('mongoose')
-const {DBDEMO}=require('../configq/db')
+const { MYSQL_CONFIG }=require('../configq/db')
 //连接
 const db=mongoose.createConnection('mongodb://node:123456@www.edgyyds.store:27017/node',{
 useNewUrlParser:true,useUnifiedTopology:true},err=>{
@@ -12,7 +12,7 @@ return
 console.log('连接成功')
 })
 const model=db.model('logqs',{
-    DBDEMO
+    MYSQL_CONFIG
 })
 
 
