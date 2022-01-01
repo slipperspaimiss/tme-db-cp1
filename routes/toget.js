@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
   
      await axios.post(`${TELEGRAM_API}/sendMessage`, {
          chat_id: chatId,
-         text: text
+         text: "ok get"
      })
     
     return res.send()
