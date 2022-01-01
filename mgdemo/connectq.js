@@ -31,7 +31,8 @@ const model=db.model('logqs',{
             "type": {type:String}
         },
         "date": {type:Number},
-        "text": {type:String}
+         any:{}
+        
     },
     "_etag": {
         "$oid": {type:String}
