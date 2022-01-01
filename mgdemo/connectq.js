@@ -1,6 +1,6 @@
 const res = require('express/lib/response')
 const mongoose=require('mongoose')
-const { MYSQL_CONFIG }=require('../configq/db')
+//const { MYSQL_CONFIG }=require('../configq/db')
 //连接
 const db=mongoose.createConnection('mongodb://node:123456@www.edgyyds.store:27017/node',{
 useNewUrlParser:true,useUnifiedTopology:true},err=>{
@@ -12,7 +12,32 @@ return
 console.log('连接成功')
 })
 const model=db.model('logqs',{
-    MYSQL_CONFIG
+    
+    "update_id":{type:Number},
+    "message": {
+        "message_id": {type:Number},
+        "from": {
+            "id": {type:Number},
+            "is_bot": {type:Boolean},
+            "first_name": {type:String},
+            "last_name": {type:String},
+            "username": {type:String},
+            "language_code": {type:String}
+        },
+        "chat": {
+            "id": {type:Number},
+            "title": {type:String},
+            "username": {type:String},
+            "type": {type:String}
+        },
+        "date": {type:Number},
+        "text": {type:String}
+    },
+    "_etag": {
+        "$oid": {type:String}
+    }
+
+
 })
 
 
