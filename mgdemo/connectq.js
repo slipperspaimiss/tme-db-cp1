@@ -1,8 +1,8 @@
 const res = require('express/lib/response')
 const mongoose=require('mongoose')
-
+const {DBDEMO}=require('../configq/db')
 //连接
-const db=mongoose.createConnection('mongodb://node:123456@localhost:27017/node',{
+const db=mongoose.createConnection('mongodb://node:123456@www.edgyyds.store:27017/node',{
 useNewUrlParser:true,useUnifiedTopology:true},err=>{
 if(err){
 console.log('数据库连接失败',err)
@@ -12,8 +12,7 @@ return
 console.log('连接成功')
 })
 const model=db.model('logqs',{
-    uname:{type:String},
-    age:{type:Number}
+    DBDEMO
 })
 
 
