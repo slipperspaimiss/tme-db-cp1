@@ -10,10 +10,11 @@ router.post('/', async (req, res) => {
     console.log(req.body)
     //保存日志
   let rs= await mongoadd.createmo(req.body);
+  console.log('----------------')
   if(rs){
-    console.log('suseesful')
+    console.log('suseesful-------------------')
   }else{
-    console.log('失败')
+    console.log('失败----------------------------')
   }
     const chatId = req.body.message.chat.id
      const text = req.body.message.text
