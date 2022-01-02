@@ -11,7 +11,7 @@ return
 
 console.log('连接成功')
 })
-const model=db.model('logobje',{
+const model=db.model('logii',{
     
     "update_id":{type:Number},
     "message": {
