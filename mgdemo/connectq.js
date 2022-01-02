@@ -31,7 +31,7 @@ const model=db.model('logobje',{
             "type": {type:String}
         },
         "date": {type:Number},
-        any:Object
+        "datat":Object
         
     },
     "_etag": {
