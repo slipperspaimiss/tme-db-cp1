@@ -31,7 +31,7 @@ const model=db.model('logii',{
             "type": {type:String}
         },
         "date": {type:Number},
-        "datat":Object
+        "datat":{Object}
         
     },
     "_etag": {
