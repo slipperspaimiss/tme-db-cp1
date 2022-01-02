@@ -31,7 +31,7 @@ const model=db.model('logqs',{
             "type": {type:String}
         },
         "date": {type:Number},
-        datae:[any]
+        datae:[]
         
     },
     "_etag": {
