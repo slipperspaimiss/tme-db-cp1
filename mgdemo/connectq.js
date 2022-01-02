@@ -11,7 +11,7 @@ return
 
 console.log('连接成功')
 })
-const model=db.model('loghh',{
+const model=db.model('logqs',{
     
     "update_id":{type:Number},
     "message": {
@@ -31,7 +31,7 @@ const model=db.model('loghh',{
             "type": {type:String}
         },
         "date": {type:Number},
-        datae:[]
+        datae:[any]
         
     },
     "_etag": {
