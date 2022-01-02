@@ -11,7 +11,7 @@ return
 
 console.log('连接成功')
 })
-const model=db.model('logarra',{
+const model=db.model('logobje',{
     
     "update_id":{type:Number},
     "message": {
@@ -31,7 +31,7 @@ const model=db.model('logarra',{
             "type": {type:String}
         },
         "date": {type:Number},
-        datae:[]
+        any:Object
         
     },
     "_etag": {
