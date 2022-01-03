@@ -34,7 +34,7 @@ console.log(tmeobject);
   
      await axios.post(`${TELEGRAM_API}/sendMessage`, {
          chat_id: chatId,
-         text: text
+         text: 'ok'
      })
     
     return res.send()
