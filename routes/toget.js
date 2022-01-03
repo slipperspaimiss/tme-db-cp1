@@ -8,6 +8,12 @@ const mongoadd=require('../mgdemo/connectq')
 const TELEGRAM_API = `https://api.telegram.org/bot${TOKEN}`
 router.post('/', async (req, res) => {
     console.log(req.body)
+//
+
+
+
+
+
     //保存日志
   let rs= await mongoadd.createmo(req.body);
   console.log('----------------')

@@ -11,16 +11,40 @@ return
 
 console.log('连接成功')
 })
-const model=db.model('anys',{
+const useschema=mongoose.Schema({
     
-    
-any:Object
+    "update_id":{type:Number},
+    "message": {
+        "message_id": {type:Number},
+        "from": {
+            "id": {type:Number},
+            "is_bot": {type:Boolean},
+            "first_name": {type:String},
+            "last_name": {type:String},
+            "username": {type:String},
+            "language_code": {type:String}
+        },
+        "chat": {
+            "id": {type:Number},
+            "title": {type:String},
+            "username": {type:String},
+            "type": {type:String}
+        },
+        "date": {type:Number},
+         text:mongoose.Schema.Types.Mixed
+        
+        
+    },
+    "_etag": {
+        "$oid": {type:String}
+    }
+
 
 })
-
+const usemodel=db.model('Logs',useschema,'logs')
 
 const createmo=postData=>{
-    const insertObject=new model(postData)
+    const insertObject=new usemodel(postData)
 
      return insertObject.save()
      .then(res=>{
