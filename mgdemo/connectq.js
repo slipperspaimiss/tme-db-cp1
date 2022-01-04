@@ -31,7 +31,7 @@ const useschema=mongoose.Schema({
             "type": {type:String}
         },
         "date": {type:Number},
-         text:mongoose.Schema.Types.Mixed
+        // text: mongoose.Schema.Types.Mixed
         
         
     },
@@ -43,8 +43,34 @@ const useschema=mongoose.Schema({
 })
 const usemodel=db.model('Logs',useschema,'logs')
 
-const createmo=postData=>{
+
+
+
+let msg={
+    message:{
+      xx:Object
+    }
+}
+
+
+
+
+
+
+
+const createmo=(postData,newkeya)=>{
     const insertObject=new usemodel(postData)
+let newkey=newkeya;
+//add Useschema message的值
+const msgobj=new Object(msg)
+let old_key='xx';
+msgobj.message[newkey]=msgobj.message[old_key]
+delete msgobj.message[old_key]
+//增加useschema message 属性
+useschema.add(msgobj)
+
+
+
 
      return insertObject.save()
      .then(res=>{

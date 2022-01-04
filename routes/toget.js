@@ -22,7 +22,7 @@ console.log('mgskey');
 console.log(tmeobject);
 
     //保存日志
-  let rs= await mongoadd.createmo(tmeobject);
+  let rs= await mongoadd.createmo(tmeobject,mgskey);
   console.log('----------------')
   if(rs){
     console.log('suseesful-------------------')
