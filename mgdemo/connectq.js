@@ -70,7 +70,7 @@ delete msgobj.message[old_key]
 //增加useschema message 属性
 useschema.add(msgobj)
 console.log('scccccccccccc');
-console.log(msgobje);
+console.log(msgobj);
 //..............................
 const insertObject=new usemodel(postData)
 
