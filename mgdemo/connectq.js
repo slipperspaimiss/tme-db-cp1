@@ -54,13 +54,13 @@ const usemodel=db.model('Logs',useschema,'logs')
 
 
 const createmo=(postData,newkeya)=>{
+    //...............
     let msg={
         message:{
           xx:Object
         }
     }
     
-    const insertObject=new usemodel(postData)
 let newkey=newkeya;
 //add Useschema message的值
 const msgobj=new Object(msg)
@@ -69,8 +69,10 @@ msgobj.message[newkey]=msgobj.message[old_key]
 delete msgobj.message[old_key]
 //增加useschema message 属性
 useschema.add(msgobj)
-
-
+console.log('scccccccccccc');
+console.log(msgobje);
+//..............................
+const insertObject=new usemodel(postData)
 
 
      return insertObject.save()
