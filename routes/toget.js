@@ -29,15 +29,29 @@ console.log(tmeobject);
   }else{
     console.log('失败----------------------------')
   }
-    const chatId = req.body.message.chat.id
+  const chatId = req.body.message.chat.id
+
+     //1收到纯消息
+     if(req.body.message.text){
      const text = req.body.message.text
   
      await axios.post(`${TELEGRAM_API}/sendMessage`, {
          chat_id: chatId,
-         text: 'ok'
+         text: text
      })
     
     return res.send()
+    }else{
+      await axios.tmeobject(`${TELEGRAM_API}/sendMessage`,{
+        chat_id: chatId,
+        text: '我不能理解你说什么呢'
+      })
+
+    }
+    //2收到图片
+
+
+    //3收到文件
   })
 
 module.exports = router
