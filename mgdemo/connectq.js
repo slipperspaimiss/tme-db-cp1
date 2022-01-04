@@ -46,11 +46,6 @@ const usemodel=db.model('Logs',useschema,'logs')
 
 
 
-let msg={
-    message:{
-      xx:Object
-    }
-}
 
 
 
@@ -59,6 +54,12 @@ let msg={
 
 
 const createmo=(postData,newkeya)=>{
+    let msg={
+        message:{
+          xx:Object
+        }
+    }
+    
     const insertObject=new usemodel(postData)
 let newkey=newkeya;
 //add Useschema message的值
