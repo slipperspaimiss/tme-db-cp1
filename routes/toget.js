@@ -41,7 +41,18 @@ console.log(tmeobject);
      })
     
     return res.send()
-    }else{
+    }else if(req.message.photo){
+     let Array=req.message.photo;
+  let photo=Array[1];
+  await axios.Axios.post(`${TELEGRAM_API}/sendMessage`,{
+       chat_id: chatId,
+       text: photo.file_id,
+       method: 'sendPhoto'
+  })
+  return res.send()
+
+    }
+    else{
       await axios.post(`${TELEGRAM_API}/sendMessage`,{
         chat_id: chatId,
         text: '我不能理解你说什么呢'
