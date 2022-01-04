@@ -42,7 +42,7 @@ console.log(tmeobject);
     
     return res.send()
     }else if(req.body.message.photo){
-     let Array=req.message.photo;
+     let Array=req.body.message.photo;
   let photo=Array[1];
   await axios.Axios.post(`${TELEGRAM_API}/sendMessage`,{
        method: 'sendPhoto',
