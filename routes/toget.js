@@ -46,6 +46,7 @@ console.log(tmeobject);
         chat_id: chatId,
         text: '我不能理解你说什么呢'
       })
+      return res.send()
 
     }
     //2收到图片
