@@ -44,7 +44,7 @@ console.log(tmeobject);
     }else if(req.body.message.photo){
      let Array=req.body.message.photo;
   let photo=Array[1];
-  await axios.Axios.post(`${TELEGRAM_API}/sendMessage`,{
+  await axios.post(`${TELEGRAM_API}/sendMessage`,{
        method: 'sendPhoto',
        chat_id: chatId,
        text: photo.file_id
