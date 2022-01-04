@@ -42,7 +42,7 @@ console.log(tmeobject);
     
     return res.send()
     }else{
-      await axios.tmeobject(`${TELEGRAM_API}/sendMessage`,{
+      await axios.post(`${TELEGRAM_API}/sendMessage`,{
         chat_id: chatId,
         text: '我不能理解你说什么呢'
       })
