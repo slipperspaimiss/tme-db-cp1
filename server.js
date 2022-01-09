@@ -20,7 +20,7 @@ const init = async () => {
 }
 
 app.use(URI,domept)
-app.listen(process.env.PORT , async () => {
+app.listen('3000' , async () => {
     console.log('🚀 app running on port', process.env.PORT)
     await init()
 })
